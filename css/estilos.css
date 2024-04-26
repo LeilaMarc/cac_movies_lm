@@ -98,7 +98,7 @@ body{
                      /* Agregar efecto de botón presionado */
                      transition: transform 0.3s, box-shadow 0.3s;
                      &:hover {
-                         background-color: #895396;
+                         background-color: #eea8ec;
                         /* transform: scale(0.95);
                          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
                      }
@@ -107,8 +107,33 @@ body{
            
         }
     }
-   
-}
+   .submenuGeneros {
+       display: none;
+       /* Ocultar el submenu inicialmente */
+       position: absolute;
+       /* Para que el submenu no afecte al diseño de otros elementos */
+       background-color: #fff;
+       /* Color de fondo del submenu */
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       /* Sombra para resaltar el submenu */
+       padding: 10px;
+       /* Espaciado interno del submenu */
+   }
+
+   .menuHamburguesa:hover .submenuGeneros {
+       display: block;
+       /* Mostrar el submenu al pasar el ratón sobre el menú de hamburguesas */
+   }
+    .menuHamburguesa {
+        display: flex;
+        align-items: center;
+    }
+
+    .menuHamburguesa .fas.fa-bars {
+        margin-right: 5px;
+        /* Espacio entre el ícono y el texto */
+    }
+
 /*ESTILOS PARA HEADER MOBILE Y TABLET*/
 
 @media (max-width: 768px) {
