@@ -112,12 +112,15 @@ body{
        /* Ocultar el submenu inicialmente */
        position: absolute;
        /* Para que el submenu no afecte al diseño de otros elementos */
+       top: 100%; /* Coloca el submenu debajo del elemento padre */
+       left: 0; /* Alinea el submenu con el borde izquierdo del elemento padre */
        background-color: #fff;
        /* Color de fondo del submenu */
        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
        /* Sombra para resaltar el submenu */
        padding: 10px;
        /* Espaciado interno del submenu */
+       transition: display 0.3s ease-in-out;
    }
 
    .menuHamburguesa:hover .submenuGeneros {
@@ -127,12 +130,9 @@ body{
     .menuHamburguesa {
         display: flex;
         align-items: center;
+        position: relative;
     }
 
-    .menuHamburguesa .fas.fa-bars {
-        margin-right: 5px;
-        /* Espacio entre el ícono y el texto */
-    }
 
 /*ESTILOS PARA HEADER MOBILE Y TABLET*/
 
